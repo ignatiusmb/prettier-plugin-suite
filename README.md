@@ -17,7 +17,14 @@ To install `prettier-plugin-sort-package-json`, run the following command:
 pnpm add -D prettier-plugin-sort-package-json
 ```
 
-To use `prettier-plugin-sort-package-json`, add it to your Prettier configuration file ([automatic plugin discovery has been removed](https://prettier.io/blog/2023/07/05/3.0.0.html#plugin-search-feature-has-been-removed-14759httpsgithubcomprettierprettierpull14759-by-fiskerhttpsgithubcomfisker)):
+To use `prettier-plugin-sort-package-json` with the CLI, use the `--plugin` parameter:
+
+```diff
+- prettier --write .
++ prettier --write . --plugin=prettier-plugin-sort-package-json
+```
+
+If you have a configuration file, you can also add this to the `"plugins"` list:
 
 ```json
 {
