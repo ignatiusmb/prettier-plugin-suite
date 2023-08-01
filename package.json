@@ -7,7 +7,8 @@
     "watch": "tsc --watch",
     "format": "prettier -w . --plugin=./src/index.js",
     "check": "prettier -c . --plugin=./src/index.js",
-    "prepublishOnly": "tsc && pnpm format"
+    "prepare": "tsc",
+    "prepublishOnly": "pnpm format"
   },
   "types": "./src/index.d.ts",
   "exports": "./src/index.js",
