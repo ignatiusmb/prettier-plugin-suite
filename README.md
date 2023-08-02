@@ -2,12 +2,12 @@
 
 A [Prettier](https://prettier.io/) plugin to sort the `package.json` file in a consistent and opinionated way, this ensures that your `package.json` file is always well-organized and easy to read.
 
-- 🌟 Set and forget
-- 🔌 Zero-dependency
-- 🔧 Zero-configuration
-- 🛠️ Auto-fix with Prettier
-- 🚀 No extra commands needed
-- 🧹 Lint together with Prettier
+-   🌟 Set and forget
+-   🔌 Zero-dependency
+-   🔧 Zero-configuration
+-   🛠️ Auto-fix with Prettier
+-   🚀 No extra commands needed
+-   🧹 Lint together with Prettier
 
 ## Usage
 
