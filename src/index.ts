@@ -35,7 +35,6 @@ const order = [
 	'homepage',
 	'license',
 	'funding',
-
 	'author',
 	'maintainers',
 	'contributors',
@@ -47,6 +46,7 @@ const order = [
 	'main',
 	'module',
 	'browser',
+	'svelte',
 	'types',
 	'typings',
 
