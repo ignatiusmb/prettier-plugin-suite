@@ -5,10 +5,10 @@
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
-		"watch": "tsc --watch",
+		"watch": "pnpm prepare --watch",
 		"format": "prettier -w . --plugin=./src/index.js",
 		"check": "prettier -c . --plugin=./src/index.js",
-		"prepare": "tsc",
+		"prepare": "tsc --declaration",
 		"prepublishOnly": "pnpm format"
 	},
 	"types": "./src/index.d.ts",
