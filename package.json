@@ -2,6 +2,7 @@
 	"name": "prettier-plugin-sort-package-json",
 	"version": "0.1.1",
 	"description": "Prettier plugin to sort package.json",
+	"license": "MIT",
 	"type": "module",
 	"scripts": {
 		"watch": "tsc --watch",
