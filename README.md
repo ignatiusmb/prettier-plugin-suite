@@ -28,7 +28,7 @@ If you have a configuration file, you can also add this to the `"plugins"` list:
 
 ```json
 {
-    "plugins": ["prettier-plugin-sort-package-json"]
+	"plugins": ["prettier-plugin-sort-package-json"]
 }
 ```
 

@@ -6,23 +6,23 @@ settings:
 
 devDependencies:
   mauss:
-    specifier: ^0.6.0
-    version: 0.6.0
+    specifier: ^0.7.1
+    version: 0.7.1
   prettier:
-    specifier: ^3.0.0
-    version: 3.0.0
+    specifier: ^3.0.2
+    version: 3.0.2
   typescript:
     specifier: ^5.1.6
     version: 5.1.6
 
 packages:
 
-  /mauss@0.6.0:
-    resolution: {integrity: sha512-rBrlrXSRv9fvBOevUh+UyFWyLgi9cIlNafySv0IxbT5RgFC8h12EmXu5XtPauj3gj/5hxjmt6QvpXIGbtGVuNQ==}
+  /mauss@0.7.1:
+    resolution: {integrity: sha512-ofUS5mvmZxTaqGwEx52BtAnriPYTeQ4RPuHdNa+U5CtqxdJBNYPueH0KOWJVibfCAcARNHxL8gC0CIRyNVJNaA==}
     dev: true
 
-  /prettier@3.0.0:
-    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+  /prettier@3.0.2:
+    resolution: {integrity: sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true

@@ -33,11 +33,11 @@ const order = [
 	'repository',
 	'bugs',
 	'homepage',
-	'license',
-	'funding',
 	'author',
 	'maintainers',
 	'contributors',
+	'funding',
+	'license',
 	'type',
 
 	'scripts',
