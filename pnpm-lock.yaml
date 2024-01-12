@@ -6,29 +6,29 @@ settings:
 
 devDependencies:
   mauss:
-    specifier: ^0.7.1
-    version: 0.7.1
+    specifier: ^0.7.2
+    version: 0.7.2
   prettier:
-    specifier: ^3.0.2
-    version: 3.0.2
+    specifier: ^3.1.1
+    version: 3.1.1
   typescript:
-    specifier: ^5.1.6
-    version: 5.1.6
+    specifier: ^5.3.3
+    version: 5.3.3
 
 packages:
 
-  /mauss@0.7.1:
-    resolution: {integrity: sha512-ofUS5mvmZxTaqGwEx52BtAnriPYTeQ4RPuHdNa+U5CtqxdJBNYPueH0KOWJVibfCAcARNHxL8gC0CIRyNVJNaA==}
+  /mauss@0.7.2:
+    resolution: {integrity: sha512-2UJkOyBtytLsDQEejoNw6sFb/8UcCvCyWdx51C795ycMP8hrjIIgzOaLPgETeuUQ4YSgBeeqO285dW8lLnmLYw==}
     dev: true
 
-  /prettier@3.0.2:
-    resolution: {integrity: sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==}
+  /prettier@3.1.1:
+    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /typescript@5.1.6:
-    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
