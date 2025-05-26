@@ -1,25 +1,28 @@
-import babel from 'prettier/parser-babel';
+import { parsers as babel } from 'prettier/plugins/babel';
 
 export const parsers: Record<string, import('prettier').Parser> = {
 	'json-stringify': {
-		...babel.parsers['json-stringify'],
+		...babel['json-stringify'],
 		preprocess(text, options) {
 			if (!/[\\/]package\.json$/.test(options.filepath)) {
-				if (!babel.parsers['json-stringify'].preprocess) return text;
-				return babel.parsers['json-stringify'].preprocess(text, options);
+				const { preprocess } = babel['json-stringify'];
+				return preprocess ? preprocess(text, options) : text;
 			}
 
 			const original = JSON.parse(text);
-			const sorted = order.reduce(
-				(pkg, k) => {
-					if (k in original) pkg[k] = original[k];
-					return delete original[k], pkg;
-				},
-				{} as Record<string, unknown>,
-			);
+			const sorted: Record<string, unknown> = {};
+
+			for (const key of order) {
+				if (!(key in original)) continue;
+				sorted[key] = original[key];
+				delete original[key];
+			}
+			for (const key in original) {
+				sorted[key] = original[key];
+			}
 
 			const space = options.useTabs ? '\t' : options.tabWidth;
-			return JSON.stringify({ ...sorted, ...original }, null, space);
+			return JSON.stringify(sorted, null, space);
 		},
 	},
 };
@@ -43,6 +46,7 @@ const order = [
 	'scripts',
 	'config',
 	'bin',
+	'man',
 	'main',
 	'module',
 	'browser',
@@ -52,10 +56,12 @@ const order = [
 
 	'exports',
 	'files',
+	'directories',
 	'packageManager',
 	'engineStrict',
 	'engines',
 	'os',
+	'libc',
 	'cpu',
 	'prettier',
 
@@ -70,6 +76,7 @@ const order = [
 	'overrides',
 
 	'publishConfig',
+	'devEngines',
 	'workspaces',
 	'pnpm',
 ];
