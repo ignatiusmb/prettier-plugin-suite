@@ -46,6 +46,7 @@ const order = [
 	'scripts',
 	'config',
 	'bin',
+	'man',
 	'main',
 	'module',
 	'browser',
@@ -55,10 +56,12 @@ const order = [
 
 	'exports',
 	'files',
+	'directories',
 	'packageManager',
 	'engineStrict',
 	'engines',
 	'os',
+	'libc',
 	'cpu',
 	'prettier',
 
@@ -73,6 +76,7 @@ const order = [
 	'overrides',
 
 	'publishConfig',
+	'devEngines',
 	'workspaces',
 	'pnpm',
 ];
