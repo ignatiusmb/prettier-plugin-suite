@@ -1,6 +1,6 @@
 {
 	"name": "prettier-plugin-sort-package-json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Prettier plugin to sort package.json",
 	"repository": "github:ignatiusmb/prettier-plugin-sort-package-json",
 	"license": "MIT",

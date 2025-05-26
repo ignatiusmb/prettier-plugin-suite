@@ -1,6 +1,6 @@
 # prettier-plugin-sort-package-json
 
-A [Prettier](https://prettier.io/) plugin to automatically keep `package.json` consistently tidy, sorted, and stress-free. This plugin doesn't get in your way, it will only sort when you run `prettier --write`.
+A [Prettier](https://prettier.io/) plugin to automatically keep `package.json` consistently tidy, sorted, and stress-free.
 
 - 🔌 Zero dependencies
 - ⚙️ No config, no hassle
