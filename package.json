@@ -2,7 +2,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"check": "node script.js && prettier --check .",
+		"check": "prettier --check .",
 		"format": "prettier --write ."
 	},
 	"packageManager": "pnpm@10.11.0",
