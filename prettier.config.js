@@ -1,4 +1,4 @@
-import * as mauss from 'mauss/prettier.config.js';
+import mauss from 'mauss/prettier.config.js';
 
 export default {
 	...mauss,
