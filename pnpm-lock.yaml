@@ -18,13 +18,7 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
-  workspace/sort-css-properties:
-    dependencies:
-      prettier:
-        specifier: ^3.0.0
-        version: 3.5.3
-
-  workspace/sort-package-json:
+  workspace/prettier-plugin-sort-package-json:
     dependencies:
       prettier:
         specifier: ^3.0.0
