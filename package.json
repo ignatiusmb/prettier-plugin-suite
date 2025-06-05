@@ -6,7 +6,7 @@
 		"format": "prettier --write ."
 	},
 	"packageManager": "pnpm@10.11.0",
-	"prettier": "./prettier.config.js",
+	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
 		"mauss": "^0.9.1",
 		"prettier": "^3.5.3",
