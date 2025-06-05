@@ -2,11 +2,11 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"check": "prettier --check .",
+		"check": "node script.js && prettier --check .",
 		"format": "prettier --write ."
 	},
 	"packageManager": "pnpm@10.11.0",
-	"prettier": "mauss/prettier.config.js",
+	"prettier": "./prettier.config.js",
 	"devDependencies": {
 		"mauss": "^0.9.1",
 		"prettier": "^3.5.3",
