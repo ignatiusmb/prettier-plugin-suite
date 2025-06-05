@@ -1,36 +1,14 @@
 {
-	"name": "prettier-plugin-sort-package-json",
-	"version": "1.0.1",
-	"description": "Prettier plugin to sort package.json",
-	"repository": "github:ignatiusmb/prettier-plugin-sort-package-json",
-	"license": "MIT",
+	"private": true,
 	"type": "module",
 	"scripts": {
-		"watch": "pnpm prepare --watch",
-		"format": "prettier -w . --plugin=./src/index.js",
-		"check": "prettier -c . --plugin=./src/index.js",
-		"prepare": "tsc --declaration",
-		"prepublishOnly": "pnpm format"
+		"check": "prettier --check .",
+		"format": "prettier --write ."
 	},
-	"types": "./src/index.d.ts",
-	"exports": "./src/index.js",
-	"files": [
-		"src/**/*.js",
-		"src/**/*.d.ts"
-	],
 	"packageManager": "pnpm@10.11.0",
-	"prettier": "mauss/prettier.json",
-	"keywords": [
-		"prettier",
-		"plugin",
-		"sort",
-		"package.json"
-	],
-	"peerDependencies": {
-		"prettier": "^3.0.0"
-	},
+	"prettier": "./prettier.config.js",
 	"devDependencies": {
-		"mauss": "^0.8.2",
+		"mauss": "^0.8.3",
 		"prettier": "^3.5.3",
 		"typescript": "^5.8.3"
 	}
