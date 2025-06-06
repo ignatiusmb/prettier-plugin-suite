@@ -3,6 +3,7 @@ name: REL
 on:
   push:
     branches: [master]
+  pull_request:
 
 jobs:
   detect:
@@ -19,8 +20,8 @@ jobs:
       - id: set
         run: |
           MATRIX=()
-          for p in workspace/*/package.json; do
-            PREV=$(git show HEAD^:"$f" 2>/dev/null | jq -r .version)
+          for f in workspace/*/package.json; do
+            PREV=$(git show HEAD^:"$f" 2>/dev/null | jq -r .version || echo "")
             CURR=$(jq -r .version "$f")
             NAME=$(jq -r .name "$f")
             
