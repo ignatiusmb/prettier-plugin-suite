@@ -8,7 +8,7 @@ on:
 jobs:
   detect:
     runs-on: ubuntu-latest
-    # if: startsWith(github.event.head_commit.message, 'release ~')
+    if: startsWith(github.event.head_commit.message, 'release ~')
     outputs:
       matrix: ${{ steps.set.outputs.matrix }}
 
@@ -34,7 +34,6 @@ jobs:
             echo "matrix=" >> "$GITHUB_OUTPUT"
           else
             JSON="{\"include\":[$(IFS=,; echo "${MATRIX[*]}")]}"
-            echo "Detected changes in: ${JSON}"
             echo "matrix=$JSON" >> "$GITHUB_OUTPUT"
           fi
 
@@ -50,3 +49,5 @@ jobs:
       - run: | # gh will create the matching git tag
           gh release create "${{ matrix.name }}@${{ matrix.version }}" --draft \
             --title "${{ matrix.name }}@${{ matrix.version }}" --generate-notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
