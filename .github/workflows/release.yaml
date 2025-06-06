@@ -40,6 +40,8 @@ jobs:
     needs: detect
     if: needs.detect.outputs.matrix != ''
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     strategy:
       matrix: ${{ fromJson(needs.detect.outputs.matrix) }}
 
