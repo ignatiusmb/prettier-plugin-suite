@@ -1,0 +1,22 @@
+{
+	"author": "Ignatius Bagus",
+	"bugs": "https://github.com/ignatiusmb/prettier-plugin-suite/issues",
+	"dependencies": {},
+	"description": "A randomly generated project for testing",
+	"devDependencies": {},
+	"engines": {},
+	"exports": { ".": "./index.js" },
+	"files": ["README.md"],
+	"homepage": "https://npmjs.com",
+	"keywords": ["test", "random", "json", "node"],
+	"license": "MIT",
+	"main": "index.js",
+	"module": "dist/index.mjs",
+	"name": "test",
+	"pnpm": {},
+	"private": true,
+	"repository": "github:ignatiusmb/prettier-plugin-suite",
+	"scripts": {},
+	"type": "module",
+	"version": "1.2.3"
+}
