@@ -1,6 +1,28 @@
 import { parsers as babel } from 'prettier/plugins/babel';
 
+function sort(json: Record<string, unknown>) {
+	const sorted: Record<string, unknown> = {};
+
+	for (const key of order) {
+		if (!(key in json)) continue;
+		sorted[key] = json[key];
+		delete json[key];
+	}
+	for (const key in json) {
+		sorted[key] = json[key];
+	}
+
+	return sorted;
+}
+
 export const parsers: Record<string, import('prettier').Parser> = {
+	'sort-package-json': {
+		...babel['json-stringify'],
+		preprocess(text, options) {
+			const space = options.useTabs ? '\t' : options.tabWidth;
+			return JSON.stringify(sort(JSON.parse(text)), null, space);
+		},
+	},
 	'json-stringify': {
 		...babel['json-stringify'],
 		preprocess(text, options) {
@@ -8,21 +30,8 @@ export const parsers: Record<string, import('prettier').Parser> = {
 				const { preprocess } = babel['json-stringify'];
 				return preprocess ? preprocess(text, options) : text;
 			}
-
-			const original = JSON.parse(text);
-			const sorted: Record<string, unknown> = {};
-
-			for (const key of order) {
-				if (!(key in original)) continue;
-				sorted[key] = original[key];
-				delete original[key];
-			}
-			for (const key in original) {
-				sorted[key] = original[key];
-			}
-
 			const space = options.useTabs ? '\t' : options.tabWidth;
-			return JSON.stringify(sorted, null, space);
+			return JSON.stringify(sort(JSON.parse(text)), null, space);
 		},
 	},
 };

@@ -20,18 +20,27 @@ npm install -D prettier-plugin-sort-package-json
 
 ## Usage
 
-Use like [any other Prettier plugin](https://prettier.io/docs/plugins), load it with the CLI via `--plugin`:
-
-```diff
-- prettier --write .
-+ prettier --write . --plugin=prettier-plugin-sort-package-json
-```
-
-Or, include it in your [config file](https://prettier.io/docs/configuration) via `"plugins"` list:
+Use like [any other Prettier plugin](https://prettier.io/docs/plugins), load it with the CLI via `--plugin` or include it in your [config file](https://prettier.io/docs/configuration) via `"plugins"` list:
 
 ```json
 {
 	"plugins": ["prettier-plugin-sort-package-json"]
+}
+```
+
+If you need to sort a `package.json`-like file, you can use the custom `parser` option:
+
+```json
+{
+	"plugins": ["prettier-plugin-sort-package-json"],
+	"overrides": [
+		{
+			"files": ["pkg.json", "template.json"],
+			"options": {
+				"parser": "sort-package-json"
+			}
+		}
+	]
 }
 ```
 

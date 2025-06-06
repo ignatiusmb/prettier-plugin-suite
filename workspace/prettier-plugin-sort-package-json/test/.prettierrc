@@ -6,7 +6,7 @@
 		{
 			"files": ["pkg.json", "template.json"],
 			"options": {
-				"parser": "sorted-package-json"
+				"parser": "sort-package-json"
 			}
 		}
 	]
