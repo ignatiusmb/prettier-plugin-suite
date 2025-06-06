@@ -1,0 +1,13 @@
+{
+	"useTabs": true,
+
+	"plugins": ["../src/index.js"],
+	"overrides": [
+		{
+			"files": ["pkg.json", "template.json"],
+			"options": {
+				"parser": "sort-package-json"
+			}
+		}
+	]
+}
